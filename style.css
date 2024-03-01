@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins,sans-serif';
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #000000;
+    color: #fff;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.continer{
+    padding: 0px 20px 0px 50px;
+    /*
+padding-top: 0px;
+padding-bottom: 50px;
+padding-left: 20px;
+padding-right: 0px;*/
+
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+   margin: 10px 20px;
+}
+
+nav ul li a{
+    color: rgb(246, 250, 1);
+    text-decoration: none;/*if text is link automatically change*/
+    font-size: 18px;
+    position: relative/*it has to be relative for eache line*/;
+}
+nav ul li a::after{/*it is for make the line at the link*/
+    content: '';
+    width: 0%;/*mejemria lay 100 kehone ytayal BUT now,the line will be hiden WHY hover lay .....*/
+    height: 0px;/*it is the line of height*/
+    background : #04f304;/*the color of line for home,contact,portfolio..*/
+    position: absolute;/*line absolutly for each*/
+    left: 0;
+    bottom: -6px;/*mesmeru kesuhufu betachi endionln be - 6 wedettach yhonal*/
+}
+nav ul li a:hover{/*::after nebere*/
+    width: 100px;/*now when the cursor moving the line is not hide */
+    color: #00ff2a;
+    transform:translateY(-10px);/*when the coursor clickon that it move to up */
+
+}
+
+.header-text{
+    margin-top: 20px;
+    font-size: 30px;
+    }
+.header-text h1{
+    font-size: 60px;
+    color: rgb(4, 215, 243);
+
+}
+.header-text h1 span{
+    color: #00ff40;
+}
+
+/*-------------------------------about--------------------*/
+#about{
+    padding: 100px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;/*move about me intp right side*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex-basis: 35%;
+    
+
+
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.about-col-2{
+    flex-basis: 60%;/*between image and text some space*/
+}
+.sub-title{
+    font-size: 60px;
+    font-weight:600;
+    color: #fff;
+}
+.tab-title{
+   display: flex; /*skill,ex..writting from down to right*/
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500px;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-links::after{
+content: '';
+width: 0;
+height: 3px;
+background: #00ff40;
+position: absolute;
+left: 0;
+bottom: -8px;
+transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width:100%;
+}
+.tab-contents ul li{
+list-style: none;
+margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: #00ff40;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;/*hiden each description*/
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ******************************************Services*********************************** */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));/*use for grid each serices list */
+  grid-gap: 40px; 
+  margin-top: 50px;
+  
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300px;
+    border-radius: 10px;
+    transition: background 0.5s, transfrm 5s ;/*the color is how much time take for hovering*/
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+    }
+    .services-list div a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        margin-top: 20px;
+        display: inline-block;
+
+    }
+    .services-list div:hover{
+        background: #198a2c;
+        transform:translateY(-10px);/*when the coursor clickon that it move to up */
+
+    }
+    /****************************Portfolio*****************************************/
+#portfolio{
+   padding: 50px,0; 
+  
+}
+.work-list{/*uses for each image grid*/
+ display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));/*use for grid each serices list */
+  grid-gap: 40px; 
+  margin: 50px;
+}
+.work{
+    border: radius 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;/*if it is 0 the color will be hiden*/
+    background: linear-gradient(rgb(0,0,0,0.6),#094d09);
+    border-radius: 10px;
+    /***********************************************************************************/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    /***********************************************************************************/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;/*decrse the text size or increase*/
+    transition: height 0.5s;/*show the work list by 0.5s*/
+}
+
+.layer h3{
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #131012/*text color of link*/;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #00ff2a;/*link back ground*/
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;/*work list was hidden Now,it will be show*/
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #00ff2a;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: wheat;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: #198a2c;
+}
+
+/***********************Contact***********************************************/
+.contacct-left{
+    flex-basis: 35%;
+}
+.contacct-right{
+    flex-basis: 60%;
+}
+.contacct-left p{/******************1:19******it has to be insert i or fontawesome"i" ***img{
+   
+}
+*********************/
+margin: 30px;
+}
+.social-icons{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+    width: 30px;
+    height: 30px;
+
+    background-color:  #00ff6a;
+   
+}
+.social-icons  a:hover{
+    color:#00ff40 ;
+    transform: translate(-5px);
+
+    }
+.btn.btn2{
+    display: inline-block;
+    background: #02692d;
+    color: #b9fc00;
+}
+.btn.btn2:hover{
+    
+    background: #000000;
+    color: #ffffff;
+}
+
+
+.contacct-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background:#262626 ;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius:6px ;
+
+}
+form.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{/*next you have to add "i " color 1.28*/
+   width: 100%;
+   text-align: center;
+   padding: 25px 0;
+   background: #262626;
+   font-weight: 300; 
+   margin-top: 20px;
+
+}
+.ewizp a{ 
+    margin-left: 20px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+/*--------------css for small screen---------------
+@media (min-width: 600px) {
+    #header{
+        background-image: url(IMAGE/background-photo.png);
+        
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 100px;
+
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+}
+*/
