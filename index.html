@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>university</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    nav{
+
+        /***************NAVIGATION****************/
+nav{
+    position: fixed;/*DOESNT MOVE THE BACKGROUND IMAGE*/
+    width: 100%;
+    background-color: rgb(124, 132, 238);
+    display: flex;/* MOVE THE NAVIGATOR FROM THE BOTTOM TO LOGO AT LEFT SIDE*/
+    flex-direction: row;
+    justify-content: space-between;/*MOVE THE NAVIGATOR  FROM LOGO LEFT SIDE TO LEFT SIDE AT THE END */
+    padding: 0.6vw 6vw;/*AT THE LEFT SIDE AND THE RIGJT SIDE  SPACE FOR THEM*/
+    box-shadow: 2px 2px 10px rgb(0, 0, 0,0.15);/* IT SHADOW OF THE NAVIGATOR */
+}  
+
+
+.contenet{
+    margin-top:50%;
+}
+    }
+    ul{
+    background-color: #121418;
+    width: 16%;
+    height: 100%;
+    position: fixed ;/*the diffence between relative and if t is fied it will be rgular at the end 
+            if it is relative it will be only util our spesfication (task)*/
+    padding-top: 5%;  
+    text-align: center;             
+
+    }
+    ul li{
+    list-style: none;
+    padding-bottom: 30px;
+    font-size: 15px;
+    }
+    ul li a{
+    color: rgb(0, 255, 34);
+
+    font-weight: bold;
+
+    }
+    ul li a:hover{
+    color: rgb(238, 255, 0);
+    text-decoration: none;
+    }
+    ul li a:active{
+        color: rgb(4, 92, 255);
+     
+        }
+</style>
+</head>
+<body>
+<nav>
+    <img src="IMAGE/logo.png" alt="log of Ethiopia Gonder">
+  
+</nav>
+
+<div class="contenet">
+    <aside >
+        <ul class="side-bar">
+        <li>
+              <a href="">My profile</a>
+          </li>
+          <li>
+          <a href="">My Courses</a>
+            
+          </li>
+          <li>
+          <a href="">My Rsult</a>
+          </li>
+          <li>
+              <a href="">Notice</a>
+          </li>             
+        </ul>
+</div>
+    
+</body>
+</html>

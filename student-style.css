@@ -1,0 +1,108 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    }
+    .header{
+    width: 98%;
+    margin-top:-81px ;
+    position: fixed;
+    background-color: rgb(91, 162, 255);
+    line-height: 81px;
+    padding-left: 30px;
+
+    }
+    a,:hover{
+    text-decoration: none;
+
+    }
+    .logout{
+    float: right;
+    padding-right: 30px;
+    }
+    .btn-logout{
+    background-color: rgba(121, 4, 189, 0.767);
+    color: white;
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    }
+    .btn-logout:hover{
+    background-color: rgba(255, 13, 25, 0.801);
+    color: rgb(235, 235, 235);
+
+    }
+   
+    ul{
+    background-color: #121418;
+    width: 16%;
+    height: 100%;
+    position: fixed ;/*the diffence between relative and if t is fied it will be rgular at the end 
+            if it is relative it will be only util our spesfication (task)*/
+    padding-top: 5%;  
+    text-align: center;             
+
+    }
+    ul li{
+    list-style: none;
+    padding-bottom: 30px;
+    font-size: 15px;
+    }
+    ul li a{
+    color: rgb(0, 255, 34);
+
+    font-weight: bold;
+
+    }
+    ul li a:hover{
+    color: rgb(238, 255, 0);
+    text-decoration: none;
+    }
+    ul li a:active{
+        color: rgb(4, 92, 255);
+     
+        }
+    .content{
+    margin-left: 20%;
+    margin-top: 6%;
+    }
+    /** student update design */
+    label{
+        display:inline-block;
+        text-align:right;
+        width:100px;
+        padding:10px 10px;
+        font-weight: bold;
+        }
+
+        .updateStudent-btn{
+        width:100px;
+        height:30px;
+        border:none;
+        border-radius:5px;
+        background: rgba(225, 0, 255, 0.918);
+        color: white;
+        font-weight:bold;
+        margin-top: 15px;
+
+        }
+        .updateStudent-btn:hover{
+        border-style:solid;
+        background: yellow;
+        color: black;
+        }
+        .div-design{
+        background-color: rgb(123, 255, 0);
+        width: 500px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        border-radius:10px;
+        margin-right:30px;
+        }
+        input{
+            padding: 4px;
+            width:50%;
+            border-radius:5px;
+            border-style:none;
+        }

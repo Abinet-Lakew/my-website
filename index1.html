@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    /* You can add your styling here */
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="IMAGE/admas-logo.jpg" alt="log of Admas Univsiersty">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Admission</a></li>
+      <li><a href="#" class="btn btn-success">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="section">
+    <label for="program">Select Program:</label>
+    <select id="program" onchange="showProgramInfo()">
+      <option value="">-- Select Program --</option>
+      <option value="tvt">TVT</option>
+      <option value="dgree">Degree</option>
+      <option value="phd">PhD</option>
+    </select>
+
+    <div id="program-info"></div>
+  </div>
+
+  <script>
+    const programInfo = {
+      tvt: {
+        title: "Available TVT Programs",
+        courses: [
+          "Database Design and Database Administration",
+          "Network Security and Administration"
+        ]
+      },
+      dgree: {
+        title: "Available Degree Programs",
+        courses: [
+          "Database Design and Database Administration",
+          "Software Engineering"
+        ]
+      },
+      phd: {
+        title: "Available PhD Programs",
+        courses: [
+          "Database Design and Database Administration",
+          "Artificial Intelligence"
+        ]
+      }
+    };
+
+    function showProgramInfo() {
+      const selectedProgram = document.getElementById("program").value;
+      const programDetails = programInfo[selectedProgram];
+
+      if (programDetails) {
+        const programInfoDiv = document.getElementById("program-info");
+        programInfoDiv.innerHTML = `<h2>${programDetails.title}</h2>`;
+        const courseList = document.createElement("ul");
+        for (const course of programDetails.courses) {
+          const courseItem = document.createElement("li");
+          courseItem.textContent = course;
+          courseList.appendChild(courseItem);
+        }
+        programInfoDiv.appendChild(courseList);
+      } else {
+        document.getElementById("program-info").innerHTML = "";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+.contacct-left{
+  flex-basis: 35%;
+}
+.contacct-right{
+  flex-basis: 60%;
+}
+.contacct-left p{/******************1:19******it has to be insert i or fontawesome"i" ***img{
+ 
+}
+*********************/
+margin: 30px;
+}
+.social-icons{
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+  width: 30px;
+  height: 30px;
+
+  background-color:  #00ff6a;
+ 
+}
+.social-icons  a:hover{
+  color:#00ff40 ;
+  transform: translate(-5px);
+
+  }
+.btn.btn2{
+  display: inline-block;
+  background: #02692d;
+  color: #b9fc00;
+}
+.btn.btn2:hover{
+  
+  background: #000000;
+  color: #ffffff;
+}
+
+
+.contacct-right form{
+  width: 100%;
+}
+form input,form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background:#262626 ;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius:6px ;
+
+}
+form.btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright{/*next you have to add "i " color 1.28*/
+ width: 100%;
+ text-align: center;
+ padding: 25px 0;
+ background: #262626;
+ font-weight: 300; 
+ margin-top: 20px;
+
+}
+.ewizp a{ 
+  margin-left: 20px;
+  margin-top: 30px;
+  text-decoration: none;
+  color: cornflowerblue;
+}

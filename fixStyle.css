@@ -1,0 +1,80 @@
+                *{
+                margin: 0px;
+                padding: 0px;
+                }
+
+                a,:hover{
+                text-decoration: none;
+
+                }
+                .logout{
+                float: right;
+                padding-right: 30px;
+                }
+                .btn-logout{
+                background-color: rgba(121, 4, 189, 0.767);
+                color: white;
+                width: 80px;
+                height: 40px;
+                padding: 5px;
+                border-radius: 5px;
+                }
+                .btn-logout:hover{
+                background-color: rgba(255, 13, 25, 0.801);
+                color: rgb(235, 235, 235);
+
+                }
+
+                ul{
+                margin-top:82px;
+                background-color: #121418;
+                width: 16%;
+                height: 100%;
+                position: fixed ;/*the diffence between relative and if t is fied it will be rgular at the end 
+                if it is relative it will be only util our spesfication (task)*/
+                padding-top: 5%;  
+                text-align: center;             
+
+                }
+                ul li{
+                list-style: none;
+                padding-bottom: 30px;
+                font-size: 15px;
+                }
+                ul li a{
+                color: rgb(0, 255, 34);
+
+                font-weight: bold;
+
+                }
+                ul li a:hover{
+                color: rgb(238, 255, 0);
+                text-decoration: none;
+                }
+                ul li a:active{
+                color: rgb(4, 92, 255);
+
+                }
+
+                #home {
+                    background-image: url(IMAGE/bg3.jpg);
+                    width: 100%;
+                    height: 97vh;
+                    background-size: cover;
+                    background-repeat: repeat; /* Repeat the image in both directions */
+                    padding-top: 40px;
+                    position: fixed;
+                  }
+                  
+                .content{
+                margin-left: 20%;
+                margin-top: 6%;
+                }
+
+                .header{
+                width: 98%;
+                position: fixed;
+                background-color: rgb(91, 162, 255);
+                line-height: 81px;
+                padding-left: 30px;
+                }
